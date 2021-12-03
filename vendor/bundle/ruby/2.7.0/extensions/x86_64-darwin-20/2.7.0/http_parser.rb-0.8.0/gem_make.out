@@ -1,0 +1,16 @@
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/usr/local/opt/ruby@2.7/bin/ruby -I /usr/local/Cellar/ruby@2.7/2.7.5/lib/ruby/2.7.0 -r ./siteconf20211203-55256-1931v8q.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= clean
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\=
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20211203-55256-1sgdpji

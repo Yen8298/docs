@@ -1,0 +1,13 @@
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+/usr/local/opt/ruby@2.7/bin/ruby -I /usr/local/Cellar/ruby@2.7/2.7.5/lib/ruby/2.7.0 -r ./siteconf20211203-55256-1y5p747.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make DESTDIR\= clean
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make DESTDIR\=
+make: Nothing to be done for `all'.
+
+current directory: /Users/yen.nguyen/Documents/GitHub/docs/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make DESTDIR\= install
