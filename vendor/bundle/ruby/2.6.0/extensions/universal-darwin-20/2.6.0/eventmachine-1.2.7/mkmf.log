@@ -16,4 +16,5 @@ checked program was:
 6: }
 /* end */
 
+"pkg-config --exists openssl"
 package configuration for openssl is not found
