@@ -1,10 +1,10 @@
 ---
-title: "Sample WebUI tests project with Data-driven testing (Shopping Cart sample)" 
+title: "Sample WebUI tests project with data-driven testing (Shopping Cart sample)" 
 sidebar: katalon_studio_docs_sidebar
 permalink: katalon-studio/docs/shopping-cart-prj.html 
 ---
 
-This sample demonstrates WebUI testing with Data-driven testing in Katalon Studio. This sample also shows you an extensive use of custom keywords in the test case.
+This sample demonstrates WebUI testing with data-driven testing in Katalon Studio. This sample also shows you an extensive use of custom keywords in the test case.
 
 The Application Under Test (AUT) is the Katalon shop website: `http://cms.demo.katalon.com`. You can learn more about WebUI testing in this document: [Introduction to WebUI testing](https://docs.katalon.com/katalon-studio/docs/introduction-to-web-testing.html#before-you-begin).
 
@@ -14,7 +14,7 @@ To open the Shopping Cart sample project, in Katalon Studio, go to **File > New 
 
 <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Open-sample-shopping-cart.png" width="70%" alt="Open Shopping cart sample in Studio">
 
-Alternatively, you can download the Shopping Cart sample project from our Github repository here: [Shopping Cart sample](https://github.com/katalon-studio-samples/shopping-cart-tests).
+Alternatively, you can download the Shopping Cart sample project from our Github repository: [Shopping Cart sample](https://github.com/katalon-studio-samples/shopping-cart-tests).
 
 ## Shopping Cart sample project components
 
@@ -24,7 +24,7 @@ To open the execution profile, go to **Profiles > default**.
 
 <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Execution-profiles.png" width="70%" alt="Default profile in the Shopping Cart sample">
 
-You can create and save all global variables in the execution profile. They can be used across test cases in your project. To learn more about execution profiles and global variables, you can refer to this document: [Execution Profile and Global Variables](https://docs.katalon.com/katalon-studio/docs/execution-profile-v54.html).
+You can create and save all global variables in the execution profile. They can be used across test cases in your project. To learn more about execution profiles and global variables, you can refer to this document: [Execution profile and global variables](https://docs.katalon.com/katalon-studio/docs/execution-profile-v54.html).
 
 Katalon creates 19 global variables in this sample project as follows:
 
@@ -119,22 +119,56 @@ Katalon creates 19 global variables in this sample project as follows:
 
 Katalon also creates sample custom keywords in this sample project. To learn more about custom keywords, you can refer to this document: [Introduction to custom keywords](https://docs.katalon.com/katalon-studio/docs/introduction-to-custom-keywords.html).
 
-To view our sample custom keywords, in the **Test Explorer** panel, go to **Keywords > sample**.
+To view our sample custom keywords, in the **Test Explorer** panel, go to **Keywords > sample**. Double-click one of the following .groovy files:
+
+<table>
+<thead>
+  <tr>
+    <th>Custom-keyword files</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>BlockUIDismissed.groovy</td>
+    <td>This file contains a custom keyword that waits for the overlay in the <strong>Checkout</strong> page to disappear.</td>
+  </tr>
+  <tr>
+    <td>Checkout.groovy</td>
+    <td>This file contains custom keywords that perform checkout actions.</td>
+  </tr>
+  <tr>
+    <td>Login.groovy</td>
+    <td>This file contains custom keywords that perform login actions.</td>
+  </tr>
+  <tr>
+    <td>Select2.groovy</td>
+    <td>This file contains custom keywords that perform selecting actions.</td>
+  </tr>
+  <tr>
+    <td>Shop.groovy</td>
+    <td>This file contains custom keywords that perform adding-to-the-cart actions.</td>
+  </tr>
+  <tr>
+    <td>Utils.groovy</td>
+    <td>This file contains keywords that assist the keywords in the <code>Select2.groovy</code> file.</td>
+  </tr>
+</tbody>
+</table>
+
 
 <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Open-custom-keywords.png" width="70%" alt="Custom keywords in the Shopping Cart sample">
 
-Custom keywords can be reused many times in test cases to perform different actions such as login, adding items to cart, checkout. You can see the use of custom keywords in our sample test cases as below: [Test cases](https://docs.katalon.com/katalon-studio/docs/shopping-cart-prj.html#test-cases).
+Custom keywords can be reused many times in test cases to perform different actions such as logging in, adding items to the cart, and checking out. You can see the use of custom keywords in our sample test cases as below: [Test cases](https://docs.katalon.com/katalon-studio/docs/shopping-cart-prj.html#test-cases).
 ### Test cases
 
 1. Custom-keyword samples test cases
 
-  To view the **Custom-keyword samples** test cases in this project, in the **Test Explorer** panel, go to **Test Cases > Custom-keyword samples > Order and check out a single product/Order and check out a single product using coupon**.
+  To view the **Custom-keyword samples** test cases in this project, in the **Test Explorer** panel, go to **Test Cases > Custom-keyword samples**. Double-click to open one of the following test cases:
 
-  There are two test cases for different purposes:
+  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-custom-keywords-Test-case.png" width="70%" alt="Custom-keyword test cases">
 
-  - **Order and check out a single product** adds a single product to the shopping cart and check out. The flow in this test case is as follows:
-
-    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPNG-Order-and-check-out-a-single-product.png" width="70%" alt="Order and check out a single product">
+  - **Order and check out a single product** test case adds a single product to the shopping cart, and check out. The flow in this test case is as follows:
 
     1. We use the `loginIntoApplicationWithGlobalVariable` custom keyword to:
 
@@ -144,7 +178,7 @@ Custom keywords can be reused many times in test cases to perform different acti
     2. Go to the **Shop** page.
     3. Next, we use the `addToCartWithGlobalVariable` custom keyword to:
 
-        - Add the product to cart. The product is defined as a global variable in the execution profile.
+        - Add the product to the cart. The product is defined as a global variable in the execution profile.
         - Go to the **Cart** page.
         - Click **Proceed to checkout** to go to the **Checkout** page.
 
@@ -165,76 +199,183 @@ Custom keywords can be reused many times in test cases to perform different acti
           </a>
           <p style="text-align: center;"><em>Click the gif to enlarge it.</em></p>
 
-  - **Order and check out a single product using coupon** adds a single product to the shopping cart, applies a 50% off coupon then check out. The flow in this test case is as follows:
+          **<details><summary>Click to view the test script</summary>**
 
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Order-and-check-out-a-single-product-using%20coupon.png" width="70%" alt="Order and check out a single product using coupon">
+          ```groovy
+          import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+          import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+          import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+          import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+          import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+          import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+          import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+          import com.kms.katalon.core.model.FailureHandling as FailureHandling
+          import com.kms.katalon.core.testcase.TestCase as TestCase
+          import com.kms.katalon.core.testdata.TestData as TestData
+          import com.kms.katalon.core.testobject.TestObject as TestObject
+          import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+          import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+          import internal.GlobalVariable as GlobalVariable
 
-    - We use the `loginIntoApplicationWithGlobalVariable` custom keyword to:
+          CustomKeywords.'sample.Login.loginIntoApplicationWithGlobalVariable'()
 
-      1. Open the `http://cms.demo.katalon.com` website with maximized windows.
-      2. Log in with the username and password defined as the global variables in the execution profile.
+          WebUI.waitForElementPresent(findTestObject('Pages/Shop page/lnkShop'), GlobalVariable.waitPresentTimeout)
+
+          WebUI.click(findTestObject('Pages/Shop page/lnkShop'))
+
+          CustomKeywords.'sample.Shop.addToCartWithGlobalVariable'()
+
+          CustomKeywords.'sample.Checkout.CheckoutShop'(firstName,lastName,companyName, country, address, city, postCode, Phone)
+
+          CustomKeywords.'sample.Login.logoutFromApplication'()
+
+          WebUI.closeBrowser()
+          ```
+          </details>
+
+  - **Order and check out a single product using coupon** test case adds a single product to the shopping cart, applies a 50% off coupon, then check out. The flow in this test case is as follows:
+
+    1. We use the `loginIntoApplicationWithGlobalVariable` custom keyword to:
+
+        - Open the `http://cms.demo.katalon.com` website with maximized windows.
+        - Log in with the username and password defined as the global variables in the execution profile.
     
-    - Go to the **Shop** page.
-    - Next, we use the `applyCouponAndAddToCartWithGlobalVariable` custom keyword to:
+    2. Go to the **Shop** page.
+    3. Next, we use the `applyCouponAndAddToCartWithGlobalVariable` custom keyword to:
 
-      1. Add the product to cart. The product is defined as a global variable in the execution profile.
-      2. Go to the **Cart** page.
-      3. Fill in the coupon code defined as a global variable.
+        - Add the product to the cart. The product is defined as a global variable in the execution profile.
+        - Go to the **Cart** page.
+        - Fill in the coupon code defined as a global variable.
 
-    - For the checkout step, we use the `CheckoutShopWithGlobalVariable` custom keyword to: 
+    4. For the checkout step, we use the `CheckoutShopWithGlobalVariable` custom keyword to: 
       
-      1. Click the **Checkout** page.
-      2. Fill in checkout information. The checkout information is defined as global variables in the execution profile.
+        - Click the **Checkout** page.
+        - Fill in checkout information. The checkout information is defined as global variables in the execution profile.
         
-    - Finally, we use the `logoutFromApplication` custom keyword to:
+    5. Finally, we use the `logoutFromApplication` custom keyword to:
 
-      1. Go to the **My account** page.
-      2. Click **Log out**.
+        - Go to the **My account** page.
+        - Click **Log out**.
 
-          <a class="pop">
-          <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-TC2.gif" width="70%" alt="Order and check out a single product using coupon">
-          </a>
-          <p style="text-align: center;"><em>Click the gif to enlarge it.</em></p>
+            <a class="pop">
+            <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-TC2.gif" width="70%" alt="Order and check out a single product using coupon">
+            </a>
+            <p style="text-align: center;"><em>Click the gif to enlarge it.</em></p>
+            
+            **<details><summary>Click to view the test script</summary>**
+                        
+            ```groovy
+            import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+            import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+            import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+            import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+            import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+            import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+            import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+            import com.kms.katalon.core.model.FailureHandling as FailureHandling
+            import com.kms.katalon.core.testcase.TestCase as TestCase
+            import com.kms.katalon.core.testdata.TestData as TestData
+            import com.kms.katalon.core.testobject.TestObject as TestObject
+            import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+            import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+            import internal.GlobalVariable as GlobalVariable
+
+            CustomKeywords.'sample.Login.loginIntoApplicationWithGlobalVariable'()
+
+            WebUI.waitForElementPresent(findTestObject('Pages/Shop page/lnkShop'), GlobalVariable.waitPresentTimeout)
+
+            WebUI.click(findTestObject('Pages/Shop page/lnkShop'))
+
+            CustomKeywords.'sample.Shop.applyCouponAndAddToCartWithGlobalVariable'()
+
+            CustomKeywords.'sample.Checkout.CheckoutShopWithGlobalVariable'()
+
+            CustomKeywords.'sample.Login.logoutFromApplication'()
+
+            WebUI.closeBrowser()
+            ```
+            </details>
+
 
 2. Data-driven samples test cases
 
   To view the **Data-driven samples** test cases in this project, in the **Test Explorer** panel, go to **Test Cases > Data-driven samples > Order and check out multiple products**.
 
-  **Order and check out multiple products** adds products from the product list to the shopping cart and check out. The flow in this test case is as follows:
+  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-DDT-Test-case.png" width="70%" alt="DDT test cases">
 
-  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Order-and-check-out-multiple%20products.png" width="70%" alt="Order and check out multiple products">
+  **Order and check out multiple products** test case adds products from the product list to the shopping cart, and check out. The flow in this test case is as follows:
 
-  - We use the `loginIntoApplicationWithGlobalVariable` custom keyword to:
+  1. We use the `loginIntoApplicationWithGlobalVariable` custom keyword to:
 
-      1. Open the `http://cms.demo.katalon.com` website with maximized windows.
-      2. Log in with the username and password defined as the global variables in the execution profile.
+      - Open the `http://cms.demo.katalon.com` website with maximized windows.
+      - Log in with the username and password defined as the global variables in the execution profile.
     
-  - Go to the **Shop** page.
-  - Next, we want the test case to read the data files. To do so, we use the `getAllData()` keyword to extract product names from the product list as follows:
+  2. Go to the **Shop** page.
+  3. Next, we want the test case to read the data files. To do so, we use the `getAllData()` keyword to extract product names from the product list as follows:
 
-    ```groovy
-    TestData product = findTestData(GlobalVariable.dataFile)
-    List<String> productList = product.getAllData().stream()
-    .map{data -> data[0]}/*get first column of each row in data file */
-    .collect(Collectors.toList())/*add collect and parse to list*/
-    ```
+      ```groovy
+      TestData product = findTestData(GlobalVariable.dataFile)
+      List<String> productList = product.getAllData().stream()
+      .map{data -> data[0]}/*get first column of each row in data file */
+      .collect(Collectors.toList())/*add collect and parse to list*/
+      ```
 
-  - Then, we use the `addToCart` custom keyword to add extracted product names to cart.
+  4. Then, we use the `addToCart` custom keyword to add extracted product names to the cart.
 
-    ```groovy
-    for(def productName : productList){
-    CustomKeywords.'sample.Shop.addToCart'(productName.toString(), GlobalVariable.urlProduct)
-    }
-    ```
-  - Finally, we use the `CheckoutShopWithGlobalVariable` custom keyword to:
+      ```groovy
+      for(def productName : productList){
+      CustomKeywords.'sample.Shop.addToCart'(productName.toString(), GlobalVariable.urlProduct)
+      }
+      ```
+  5. Finally, we use the `CheckoutShopWithGlobalVariable` custom keyword to:
 
-      1. Click the **Checkout** page.
-      2. Fill in checkout information. The checkout information is defined as global variables in the execution profile.
+      - Click the **Checkout** page.
+      - Fill in checkout information. The checkout information is defined as global variables in the execution profile.
 
           <a class="pop">
-          <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/multiple-check-out%20(online-video-cutter.com).gif" width="70%" alt="Order and check out multiple products">
+          <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-TC3.gif" width="70%" alt="Order and check out multiple products">
           </a>
           <p style="text-align: center;"><em>Click the gif to enlarge it.</em></p>
+
+          **<details><summary>Click to view the test script</summary>**
+
+          ```groovy
+          import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+          import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+          import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+          import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+          import java.util.stream.Collectors
+
+          import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+          import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+          import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+          import com.kms.katalon.core.model.FailureHandling as FailureHandling
+          import com.kms.katalon.core.testcase.TestCase as TestCase
+          import com.kms.katalon.core.testdata.TestData as TestData
+          import com.kms.katalon.core.testobject.TestObject as TestObject
+          import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+          import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+          import internal.GlobalVariable as GlobalVariable
+
+          CustomKeywords.'sample.Login.loginIntoApplicationWithGlobalVariable'()
+
+          WebUI.waitForElementPresent(findTestObject('Pages/Shop page/lnkShop'), GlobalVariable.waitPresentTimeout)
+
+          WebUI.click(findTestObject('Pages/Shop page/lnkShop'))
+
+          TestData product = findTestData(GlobalVariable.dataFile)
+          List<String> productList = product.getAllData().stream()
+                        .map{data -> data[0]}/*get first column of each row in data file */
+                        .collect(Collectors.toList())/*add collect and parse to list*/
+
+          for(def productName : productList){
+            CustomKeywords.'sample.Shop.addToCart'(productName.toString(), GlobalVariable.urlProduct)
+          }
+          CustomKeywords.'sample.Checkout.CheckoutShopWithGlobalVariable'()
+          WebUI.closeBrowser()
+          ```
+          </details>
 
 ### Data Files
 
@@ -250,18 +391,18 @@ Alternatively, you can go to `<your-project-folder>\Data Files` and choose the f
 
 ### Test Suites
 
-The sample test suites demonstrate the data-driven testing in Katalon Studio. To view sample test suites, in the **Test Explorer** panel, go to **Test Suite**.
+The sample test suites demonstrate the data-driven testing in Katalon Studio. To view sample test suites, go to the **Test Suite** folder in the **Test Explorer** panel. Double-click to open one of the three following test suites:
 
 1. **Order and check out a single product multiple times** test suite demonstrates data-driven testing by data-binding.
 
-  This test suite binds the **Order and check out a single product** test case with the **Multiple Checkout** data file. After opening the **Test Suite**, click **Show Data Binding** to see the binding data. 
+    This test suite binds the **Order and check out a single product** test case with the **Multiple Checkout** data file. After opening the **Test Suite**, click **Show Data Binding** to see the binding data. 
 
-  To learn more about binding data, you can refer to the following document: [Data Binding](https://docs.katalon.com/katalon-studio/docs/run-test-case-external-data.html#manage-data-binding).
+    To learn more about binding data, you can refer to the following document: [Data Binding](https://docs.katalon.com/katalon-studio/docs/run-test-case-external-data.html#manage-data-binding).
 
-  <a class="pop">
-  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Test-suites-data-binding.png" width="70%" alt="Order and check out a single product multiple times">
-  </a>
-  <p style="text-align: center;"><em>Click the image to enlarge it.</em></p>
+    <a class="pop">
+    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Test-suites-data-binding.png" width="70%" alt="Order and check out a single product multiple times">
+    </a>
+    <p style="text-align: center;"><em>Click the image to enlarge it.</em></p>
 
 2. **Order and check out multiple products** test suite demonstrates data-driven testing by Groovy script.
 
@@ -284,13 +425,13 @@ The sample test suites demonstrate the data-driven testing in Katalon Studio. To
 
 3. **Order and check out with Global Variable** test suite demonstrates data-driven testing by global variables.
 
-    In **Order and check out with Global Variable** test suite, we call the **Custom-keywords samples** test cases. These test cases use the custom keywords with global variables.
+    In **Order and check out with Global Variable** test suite, we call the **Custom-keywords samples** test cases. These test cases use custom keywords with global variables.
 
     <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Test-suite-global-variables.png" width="70%" alt="Order and check out multiple products">
     
 ### Test suite collection
 
-**Shopping-cart-tests - Run All Test Suites**: This sample test suite collection combines the three above test suites with different testing environments. 
+**Shopping-cart-tests - Run All Test Suites** test suite collection combines the three above test suites with different testing environments. 
 
 <a class="pop">
 <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/shopping-cart-samples/KS-SHOPPING-Test-suite-collection.png" width="70%" alt="Shopping-cart-tests - Run All Test Suites">
@@ -310,16 +451,15 @@ To execute a test case or a test suite/test suite collection in the sample proje
 
 3. Observe the test result in the **Log Viewer** tab.
 
-    <a class="pop">
+
     <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/healthcare-samples/KS-SAMPLES-View-results-in-log-viewer.png" width="70%" alt="Oservice results in the log Viewer">
-    </a>
-    <p style="text-align: center;"><em>Click the image to enlarge it.</em></p>
 
     > Notes:
-    > * You can view test results in the **Result** tab in the test suite or test suite collection level. The test results can be Passed, Failed, Error or Incomplete.
+    > * You can view test results in the **Result** tab in the test suite or test suite collection level. The test results can be Passed, Failed, Error, or Incomplete.
     > * After executing test suites or test suite collections, you can view your reports and details in `<your-project-folder>/Reports`. Katalon Studio also supports exporting test reports into different formats, such as HTML, CSV, PDF, and JUnit.
     > * For real-time monitoring and better reporting capabilities, consider integrating your project with Katalon TestOps. Learn more about test result reports here: [Upload Test Results to Katalon TestOps from Katalon Studio](https://docs.katalon.com/katalon-studio/docs/katalon-analytics-beta-integration.html).
 
 ## See also
 
  * [Create test cases using Record & Playback](https://docs.katalon.com/katalon-studio/tutorials/webui-create-test-case.html#create-and-run-your-first-web-ui-test-case)
+
