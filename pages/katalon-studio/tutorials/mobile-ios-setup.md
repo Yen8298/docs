@@ -147,7 +147,10 @@ To execute mobile testing with real iOS devices, you need to:
 
    - To export the `.ipa` file, click **Product > Archive**. Follow the instructions to get the `Coffee Timer.ipa` file.
 
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/mobile-recorder-76/iOS/export.gif" width=70%>
+    <a class="pop">
+    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/mobile-recorder-76/iOS/export.gif" width=70% alt="Build the Coffee Timer.ipa">
+    </a>
+    <p style="text-align: center;"><em>Click the gif to enlarge it.</em></p>
 
 2. Verify the `.ipa` file, follow these steps:
 
