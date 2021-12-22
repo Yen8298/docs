@@ -35,15 +35,15 @@ To create a new data file, go to **File > New > Test Data**. Katalon allows you 
 
 1. Create a new test case. Go to **File > New > Test Case**. Here, we name the test case **DDT at TC level**.
 
-    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-New-test-case.png" alt="New test case" width=70%>
+    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-New-test-case.png" alt="New test case" width=100%>
 
 2. In the new test case, switch to the **Variables & Data** tab. In the **Variables** section, to add test case variables, click **Add**. Input variables in the newly added row. 
 
-    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Variables-binding-tab.png" alt="The variable & data binding tab" width=70%>
+    <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Variables-binding-tab.png" alt="The variable & data binding tab" width=100%>
 
     Values input here will automatically appear in the **Variable Binding** section.
 
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Binding-variables-at-TC-level.png" alt="Input variables appear in the variable binding section" width=70%>
+      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Binding-variables-at-TC-level.png" alt="Input variables appear in the variable binding section" width=100%>
 
 ### Manage data binding
 
@@ -132,11 +132,11 @@ To learn more about the dynamic test suite, you can refer to this document: [Dyn
   1. Add the above test case to a test suite.
   2. To conduct **Data Binding**, in the test suite editor, click **Show Data Binding**. 
       
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Show-data-binding.png" width="70%" alt="Data binding section in the test suite">
+      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Show-data-binding.png" width="100%" alt="Data binding section in the test suite">
       
   3. Select the data binding level. Katalon allows you to select the data binding level at the test case (TC) level or the suite test case (STC) level. By default, the **Use Variables and Binding at Test Case** option is selected.
 
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Data-binding-options.png" width="70%" alt="Data Binding Options">
+      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Data-binding-options.png" width="100%" alt="Data Binding Options">
 
 
       <table>
@@ -167,7 +167,7 @@ To learn more about the dynamic test suite, you can refer to this document: [Dyn
 
 After the test suite execution, to view your test reports, go to the **Reports** folder in the **Test Explorer** panel. 
 
-  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Reports.png" width="70%" alt="Reports">
+  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/ddt-test-case-level/KS-DDT-Reports.png" width="100%" alt="Reports">
 
 Alternatively, you can also view your reports and details in `<your-project-folder>/Reports`. Katalon Studio supports exporting test reports into different formats, such as HTML, CSV, PDF, and JUnit. You can learn more about exporting reports here: [Generate reports](https://docs.katalon.com/katalon-studio/docs/test-suite-report.html#automatically-generate-reports).
 
