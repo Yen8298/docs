@@ -39,7 +39,7 @@ When this setting is applied, Katalon Studio will notify the user 15 minutes bef
 
 If you leave the bypass section empty in TestOps, idle users receive a notification like this:
 
-   <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/idle-timeout/bypass0.PNG" width=60%>
+   <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/idle-timeout/KS-Idle-timeout-dialog-no-bypassed-time.png" width=60% alt="no bypass">
 
 * To resume the session, the user can click **Continue**. If you set a bypass limit in TestOps, the notification dialog displays how many times idle users have left to resume the session.
 
