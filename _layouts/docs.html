@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="{{"/css/github.css" | prepend:site.baseurl}}">
     <link rel="stylesheet" href="{{"/css/normalize.css" | prepend:site.baseurl}}">
     <link rel="stylesheet" href="{{"/css/image-modal.css" | prepend:site.baseurl}}">
+    <link rel="stylesheet" href="{{"/css/annoucement-box.css" | prepend:site.baseurl}}">
 
 
     <title>{{page.title}} | {{site.site_title}}</title>
@@ -142,6 +143,21 @@
                     </div>
                 </div>
             </div>
+        </nav>
+        <nav class="navbar-child navbar-fixed-top navbar-inverse" style="margin-top:50px">
+            <a class="emger">
+                <div id="top-header">
+                  <div id="emergency-response-opt" class="em-standard">
+                    <div class="circle">
+                      <div class="circle-wrapper pulsate-fwd"></div>
+                    </div>
+                    <div class="txt">
+                      <p>We have release a new Katalon Studio version that gets rid of Log4j.</p>
+                    </div>
+                  </div>
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+              </a>
         </nav>
     </header>
     <div class="wrapper right-open">
