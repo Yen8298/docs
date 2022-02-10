@@ -11,6 +11,16 @@ description:
 ---
 > * Please read **[Installation and Set-up](/display/KD/Before+You+Start)** guide first to set up your mobile. The information below is provided for those who can't get their mobile testing work properly after going through the set-up guide.
 
+<html>
+  <head>
+    <title></title>
+    <style>
+      table td,th {
+        word-break: break-word;
+      }
+    </style>
+  </head>
+<body>
 <table>
     <thead>
         <tr>
@@ -102,6 +112,20 @@ idevice_id -l</code></pre>
             </td>
         </tr>
         <tr>
+            <td>Unable to Start Application while running Android tests on a Windows machine.</td>
+            <td>
+                <p>First, upgrade to the latest version of Appium.</p>
+                <p>In Katalon Studio, go to <strong> Project Settings > Desired Capabilities > Mobile > Android</strong> and add this desired capabilities:
+                    <ul>
+                        <li>Name: <code>appWaitActivity</code></li>
+                        <li>Type: String</li>
+                        <li>Value: *</li>
+                    </ul>
+                <p><img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/roubleshooting-automated-mobile-testing/android-error.png" alt="desired capabilities" width=70%>
+                <p>Click <strong>Apply</strong> to save, then run the test again.</p>    
+            </td>
+        </tr>
+        <tr>
             <td>com.kms.katalon.core.appium.exception.AppiumStartException: Appium directory is not set.</td>
             <td>
                 <p> When running tests with <strong>Katalon Runtime Engine</strong>, by default Katalon checks the Appium directory at:</p>
@@ -139,3 +163,5 @@ idevice_id -l</code></pre>
         </tr>                                 
     </tbody>
 </table>
+</body>
+</html>
