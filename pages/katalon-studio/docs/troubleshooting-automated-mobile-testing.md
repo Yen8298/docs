@@ -13,7 +13,6 @@ description:
 
 <html>
   <head>
-    <title></title>
     <style>
       table td,th {
         word-break: break-word;

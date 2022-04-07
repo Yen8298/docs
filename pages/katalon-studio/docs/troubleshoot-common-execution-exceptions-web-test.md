@@ -20,6 +20,14 @@ redirect_from:
 >* If the exception you are looking for is not documented, please leave a comment below to request a proposed solution from the Katalon team.
 
 <table>
+  <head>
+    <style>
+      table td,th {
+        word-break: break-word;
+      }
+    </style>
+  </head>
+<body>
 <thead>
 <tr>
 <th>Issue</th>
@@ -167,6 +175,7 @@ WebUI.click(findTestObject('Page_CuraHomepage/btn_MakeAppointment'))</code></pre
 </tr>
 </tbody>
 </table>
+</body>
 
 
 > The exception you are looking for is not on this page?
