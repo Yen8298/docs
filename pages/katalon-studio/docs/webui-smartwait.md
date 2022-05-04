@@ -22,7 +22,7 @@ You can download the Smart Wait sample project from our Github repository: [Smar
 
 Smart Wait is enabled by default in **Project > Settings > Execution > WebUI**. This default configuration will automatically download the Smart Wait extension and apply Smart Wait to all elements in that project.
 
-<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/execution-settings/KS-PRJ-Smart-wait.png" width="70%" alt="SmartWait settings">
+<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/execution-settings/KS-PRJ-Smart-wait.png" width="100%" alt="SmartWait settings">
 
 ## Apply Smart Wait for remote execution
 
@@ -92,7 +92,7 @@ To apply Smart Wait for remote execution in Chrome, follow these steps:
       </tbody>
       </table>
 
-      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/execution-settings/KS-Smart-Wait-set-up-DC-for-remote-execution.png" width="70%" alt="Apply Smart Wait for remote execution in Chrome">
+      <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/execution-settings/KS-Smart-Wait-set-up-DC-for-remote-execution.png" width="100%" alt="Apply Smart Wait for remote execution in Chrome">
 
 ## Temporarily turn off Smart Wait
 
